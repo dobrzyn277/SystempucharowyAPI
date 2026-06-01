@@ -1,11 +1,11 @@
 
 using Microsoft.EntityFrameworkCore;
 using SystempucharowyAPI.Data;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using SystempucharowyAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=tournament.db"));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=library.db"));
 
 builder.Services
     .AddGraphQLServer()

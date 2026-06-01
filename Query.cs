@@ -1,7 +1,9 @@
 ﻿using SystempucharowyAPI.Data;
 using SystempucharowyAPI.Models;
 
+namespace SystempucharowyAPI;
+
 public class Query
 {
-    public List<Tournament> GetTournaments([Service] AppDbContext db) => db.Tournaments.ToList();
+    public List<Book> GetBooks([Service] AppDbContext db) => db.Books.ToList();
 }
